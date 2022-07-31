@@ -9,11 +9,11 @@ from django.contrib.auth.models import User
 User
 class Executor(models.Model):
 
-    POSITIONS = (
+    POSITIONS = [
         ('Menedj', 'Менеджер проекта'),
         ('Superv', 'Руководитель группы'),
         ('Execut', 'Исполнитель'),
-    )
+    ]
     position = models.CharField(max_length=6, choices=POSITIONS, verbose_name='Должность')
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='Ник пользователя')
     photo = models.ImageField(upload_to='profile_pict', default='default.jpg', blank=True, verbose_name='Фотография')

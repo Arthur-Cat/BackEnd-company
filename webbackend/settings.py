@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'executor.apps.ExecutorConfig',
     'subdivision.apps.SubdivisionConfig',
+    'tasks.apps.TasksConfig',
 ]
 
 MIDDLEWARE = [
